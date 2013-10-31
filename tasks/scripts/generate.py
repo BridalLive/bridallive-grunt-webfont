@@ -44,6 +44,7 @@ if args.ligatures:
 	f.addLookupSubtable('liga', 'liga')
 
 for dirname, dirnames, filenames in os.walk(args.input_dir):
+	filenames.sort()
 	for filename in filenames:
 		name, ext = os.path.splitext(filename)
 		filePath = os.path.join(dirname, filename)
